@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<base href="/" />
+<title>Les Loups Garous de Thiercelieux, le jeu en Ligne</title>
+<meta name='keywords' content='Loups Garous, Thiercelieux, jeux de société, jeu à rôles' />
+<script type="text/javascript" src="/stuff/jquery.js?b1b14e283
+"></script>
+<script type="text/javascript" src="/static/js/js.js?b1b14e283
+"></script>
+<link rel="stylesheet" media="screen" type="text/css" title="Design" href="/designInteractions.css?b1b14e283
+" />
+<link type="text/css" href="/jquery/css/lg-theme/jquery-ui-1.8.20.custom.css?b1b14e283
+" rel="Stylesheet" />
+<script type="text/javascript" src="/jquery/js/jquery-1.7.2.min.js?b1b14e283
+"></script>
+<script type="text/javascript" src="/jquery/js/jquery-ui-1.8.20.custom.min.js?b1b14e283
+"></script>
+<script type="text/javascript" src="/static/js/actions.js?b1b14e283
+"></script>
+<script type="text/javascript" src="/static/js/infobulle.js?b1b14e283
+"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2129171140550799",
+            enable_page_level_ads: true
+            });
+        </script>
+<script>window.genre = 2;</script>
+<link rel="stylesheet" media="screen" type="text/css" title="Design" href="/design.css?b1b14e283
+" />
+<link rel="stylesheet prefetch" href="//cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="/static/css/jquery-ui.resizable.min.css?b1b14e283
+" />
+<link rel="stylesheet" href="/static/css/hint.min.css?b1b14e283
+" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Loups-Garous-en-Ligne" />
+<meta property="og:image" content="https://www.loups-garous-en-ligne.com/stuff/facebook/carte2.png" />
+<meta property="og:description" content="L'adaptation officielle en ligne du jeu Loups-Garous de Thiercelieux." />
+<meta name="detectify-verification" content="061f30d053e28623bdf9f6621877294d" />
+
+<script type="text/javascript">
+			window.cookieconsent_options = {"message":"En poursuivant votre navigation, vous consentez à l’utilisation de cookies pour assurer une bonne navigation sur le site et réaliser des statistiques de visites.","dismiss":"J'accepte","learnMore":"CGU du site","link":"http://www.loups-garous-en-ligne.com/cgu","theme":"dark-bottom"};
+		</script>
+<script>
+			function split( val ) {
+			    return val.split( /,\s*/ );
+			}
+
+			function extractLast( term ) {
+			    return split( term ).pop();
+			}
+		</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,700,800|Roboto|Boogaloo|Gloria+Hallelujah" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css" rel="stylesheet">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js"></script>
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-22928092-1', 'auto');
+    ga('send', 'pageview');
+
+    
+</script>
+<link rel="stylesheet" href="/static/css/main.min.css?b1b14e283
+" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+</head>
+<body class="site  not-premium" onLoad="preloadImages();" data-hc="805">
+<div id="curseur" class="infobulle" style="visibility: hidden"></div>
+<div class="background-village">
+<div class="background-village-light background-village-light-left-1"></div>
+<div class="background-village-light background-village-light-left-2"></div>
+<div class="background-village-light background-village-light-left-3"></div>
+<div class="background-village-light background-village-light-left-4"></div>
+<div class="background-village-light background-village-light-left-5"></div>
+<div class="background-village-light background-village-light-left-6"></div>
+<div class="background-village-light background-village-light-right-1"></div>
+<div class="background-village-light background-village-light-right-2"></div>
+<div class="background-village-light background-village-light-right-3"></div>
+<div class="background-village-light background-village-light-right-4"></div>
+</div>
+<div>
+<section class="header-site">
+<header>
+<div class="barreJeux">
+<a href="http://www.celsius-online.com/" target="_blank" class="barreJeux_logoCelsius"></a>
+<div class="barreJeux_jeux">
+<div class="barreJeux_jeux_wrapper">
+<a href="http://www.lesroyaumes.com/Landing.php?ref=5234" target="_blank" class="jeu0">Royaumes Renaissants</a>
+<a href="http://www.primal-legends.com/" target="_blank" class="jeu1">Primal Legends</a>
+<a href="http://www.marchofhistory.com/" target="_blank" class="jeu2">March Of History</a>
+<a href="http://mutants.kobojo.com/" target="_blank" class="jeu3">Mutant Genetics Gladiators</a>
+<a href="https://apps.facebook.com/voyagetofantasy/" target="_blank" class="jeu4">Voyage To Fantasy</a>
+<a href="http://www.celsiusheroes.com/?lan=fr" target="_blank" class="jeu5">Celsius<br> Heroes</a>
+</div>
+</div>
+<button class="barreJeux_boutonAgrandir" id="btnEnSavoirPlus">En savoir plus</button>
+<div class="barreJeux_detail" id="barreJeux_detail">
+<div class="barreJeux_detail_wrapper">
+<a href="http://www.lesroyaumes.com/Landing.php?ref=5234" target="_blank" class="jeu_detail jeu0">
+<div class="jeu_illustration"></div>
+<div class="jeu_texte">
+<p>On négocie le prix de son blé, on trait ses vaches, on renverse le Comte et on finit ivre à la taverne.
+La vie tranquille au Moyen-Âge...</p>
+</div>
+</a>
+<a href="http://www.primal-legends.com/" target="_blank" class="jeu_detail jeu1">
+<div class="jeu_illustration"></div>
+<div class="jeu_texte">
+<p>Composez votre armée de héros, affrontez les défis de Théria sur 300 niveaux et faites face
+aux joueurs du monde entier en temps réél dans l'arène !</p>
+</div>
+</a>
+<a href="http://www.marchofhistory.com/" target="_blank" class="jeu_detail jeu2">
+<div class="jeu_illustration"></div>
+<div class="jeu_texte">
+<p>Mêlant à la fois stratégie en temps réel, gestion et diplomatie, March of History vous plonge
+d'abord dans l'Europe médiévale où vous incarnerez une famille de seigneurs bien déterminés à perpétuer le
+nom de leur Maison à travers le bruit et la fureur de l'Histoire depuis l'An Mil jusqu'à l'Âge Nucléaire.</p>
+</div>
+</a>
+<a href="http://mutants.kobojo.com/" target="_blank" class="jeu_detail jeu3">
+<div class="jeu_illustration"></div>
+<div class="jeu_texte">
+<p>Devenez le Psy-Captain légendaire ! Bienvenue dans l'arène ! Mettez à l'épreuve vos capacités de
+Psy-Captain, découvrez et faites progresser une grande variété de Mutants et entrez dans l'arène pour
+affronter les joueurs du monde entier !</p>
+</div>
+</a>
+<a href="https://apps.facebook.com/voyagetofantasy/" target="_blank" class="jeu_detail jeu4">
+<div class="jeu_illustration"></div>
+<div class="jeu_texte">
+<p>Un jeu d’objets cachés comme vous n’en avez jamais joué auparavant: des centaines de niveaux
+variés et stimulants !</p>
+</div>
+</a>
+<a href="http://www.celsiusheroes.com/?lan=fr" target="_blank" class="jeu_detail jeu5">
+<div class="jeu_illustration"></div>
+<div class="jeu_texte">
+<p>Le dernier né de Celsius online est un jeu midcore, mettant des mécanismes de puzzle game au
+service d'un vrai jeu de rôle à l'ancienne avec une histoire, des dialogues et des héros captivants.
+Serez-vous capable de sauver le monde d'Acilion ?</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+<span>88</span> personnes en ligne sur <span>1 923 965</span> inscrits -- <span>2 843</span> connectés
+depuis 24 heures -- <span>8 287 160</span> parties ont déjà eu lieu
+</header>
+<section class="illustrationEntete">
+<div class="moon">
+</div>
+<a href="/room" draggable="false">
+<img src="static/img/header.png" alt="Bienvenue sur Loups-Garous en Ligne">
+</a>
+</section>
+<nav>
+<div></div>
+<a class="link-btn-jouer" href="/room">
+<button class="btn-jouer">
+<img src="static/img/icon-wolf-head.png" />JOUER
+</button>
+</a>
+<div class="button mini-news-button" data-tooltip="Mini-news" data-tooltip-position="top" style="display: none;">
+0
+</div>
+<a href="/news" class="button news-button" data-tooltip="News" data-tooltip-position="top">
+<img class="nav-icon" src="static/img/icon-news.png">
+</a>
+<article class="mini-news-tooltip bgdarkred shadow rounded" aria-hidden="true">
+<div class="close-button">&times;</div>
+<div class="mini-news-arrow"></div>
+<h3>Mini-news</h3>
+<div class="buttons_array bgred">
+<div class="mini-news-previous button array_clickable sound-tick">&lt;</div>
+<div class="buttons_array_text"></div>
+<div class="mini-news-next button array_clickable sound-tick">&gt;</div>
+</div>
+<p></p>
+<a href="/mini_news" class="button">Voir toutes les mini-news</a>
+</article>
+<a class="nav-link before-jouer" href="/animation">
+<img class="nav-icon" src="static/img/icon-animation.png"><span>ANIMATION</span>
+</a>
+ <a class="nav-link before-jouer" href="/hameaux">
+<img class="nav-icon" src="static/img/icon-house.png"><span>HAMEAUX</span>
+</a>
+<a class="nav-link" target="_blank" href="https://forum.loups-garous-en-ligne.com/">
+<img class="nav-icon" src="static/img/icon-forum.png"><span>FORUM</span>
+</a>
+<a class="nav-link" href="/boutique">
+<span class="new-label">New !</span><img class="nav-icon" src="static/img/icon-boutique.png"><span>BOUTIQUE</span>
+</a>
+</nav>
+</section>
+<div class="social-buttons">
+<a href="https://twitter.com/LGenligne" class="twitter-follow-button" data-show-count="false" data-lang="fr">Suivre @LGenligne</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br />
+<div id="fb-root"></div>
+<script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                        appId      : '409042135816275',
+                        autoLogAppEvents: true,
+                        xfbml      : true,
+                        version    : 'v4.0'
+                    });
+
+                FB.Event.subscribe('edge.create',
+                    function(response) {
+                        $( "#dialog" ).empty();
+                        $( "#dialog" ).append("<div style='text-align: center;min-height: 400px;'>"+
+                        "<img src='stuff/tuto/header_tuto.png' style='width:600px; height:100px;border:1px solid black;margin-bottom:40px;'><br />"+
+                        "<b style='font-size: 20px;color: #B90202;'>Merci !</b><br />"+
+                        "<div style='margin-top:30px;margin-bottom: 60px;'>Vous êtes à nouveau <b>premium</b> pour une durée d'un jour.</div>"+
+                        "<div style='margin-top:30px;'><a class='tutoBoutonNon'>Fermer cette fenêtre</a></div>"+
+                        "</div>");
+                        $( "#dialog" ).dialog( "option", "position", "center" );
+                        $( "#dialog" ).dialog( "open");
+
+                        $("a.tutoBoutonNon").bind("click", function () {
+                                $("#lightboxWebpageHider").remove();
+                                $( "#dialog" ).dialog( "close");
+                        });
+
+                        $.post(urlInteragir, {"action": "facebook_page_liked"}, 'json');
+                    }
+                );
+            };
+
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+<div class="fb-like" data-href="https://www.facebook.com/lgenligne" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="tahoma"></div>
+<div class="g-plusone" data-size="medium" data-href="http://loups-garous-en-ligne.com"></div>
+</div>
+</div>
+<div id="body" class="yellow  not-premium">
+<div id="flash-container">
+</div>
+<script>
+    window.canC = true;
+    window.canV = 'ok';
+    window.hasPremium = true;
+</script>
+<section class="ingame-page hidden">
+<h1 class="with-borders">
+<div></div>
+<span>Tu es déjà en jeu</span>
+<div></div>
+</h1>
+<article>
+</article>
+<div>
+<i class="mdi mdi-information-outline"></i>
+<span>Tu dois quitter ta partie en cours pour <b>observer</b> ou <b>jouer</b> une autre partie !</span>
+</div>
+</section>
+<section class="room-page list-room ">
+<div class="banniere_appMobile">
+<div id="perso_app"></div>
+<div id="text_app">
+<h2>Parties Blitz</h2>
+<span><strong>Découvre en exclusité les parties Blitz !</strong><br />
+Rejoins une partie en quelques secondes et <strong><u>participe à la future application mobile</u></strong> en découvrant comment y jouer <a href="https://forum.loups-garous-en-ligne.com/viewtopic.php?f=102&p=588656#p588656" target="_blank" alt="Donne ton avis sur les parties Blitz">ici</a> !
+</span>
+</div>
+<div id="blitzNbJoueurs"></div>
+<div id="bouton_app">
+<div id="barre"></div>
+<div id="rejoindre_app">
+<span>REJOINDRE UNE PARTIE</span>
+</div>
+</div>
+</div>
+<div class="carrousel-elem panel-event-stpatrick">
+<div class="text-patrick">
+<p>Pour cette Saint-Patrick, <br /> Thiercelieux se pare de son <b style="color: #1f741c;">plus beau vert</b> !</p>
+<img src="/static/img/events/st-patrick/loupatrick.png" class="patrick" alt="St-Patrick">
+</div>
+<div class="yellow-box">
+<img src="/static/img/events/st-patrick/familier_saint-patrick2020.png" class="gradient">
+<h3>Customs et équipements spéciaux !</h3>
+<p>Rends-toi en <b>boutique</b> pour ne rien rater des exclusivités de la fête !</p>
+<a class="button_secondary" href="/boutique#persos">Y aller</a>
+</div><div class="yellow-box collect-done">
+<h3>Les cadeaux du loup Patrick</h3>
+<p>Profite de <b>l'option Saint-Patrick</b> pour festoyer dans tes parties !</p><p><i>Tu as déjà obtenu tes cadeaux auprès du trèfle...</i></p></div></div>
+<div class="gametypes-modal-content">
+<article class="labels">
+<aside>
+<header>
+<div style="background-color: #4a86e8;"></div>
+<strong style="vertical-align: middle;">Partie <span style="color: #4a86e8;">FUN</span> <em>(bandeau Bleu)</em></strong>
+</header>
+<div>Des parties rapides, ambiance détente, peu de prise de tête.</div>
+</aside>
+<aside>
+<header>
+<div style="background-color: #38761d;"></div>
+<strong style="vertical-align: middle;">Partie <span style="color: #38761d;">NORMALE</span> <em>(bandeau Vert)</em></strong>
+</header>
+<div>Des parties comme dans la vraie vie, réflexion et bluff sont de rigueur.</div>
+</aside>
+<aside>
+<header>
+<div style="background-color: #a08aa6;"></div>
+<strong style="vertical-align: middle;">Partie <span style="color: #a08aa6;">CARNAGE</span> <em>(bandeau Violet)</em></strong>
+</header>
+<div>Très rapide, 6 rôles, peu voire aucune stratégie, beaucoup d'éliminations à chaque tour.</div>
+</aside>
+<aside>
+<header>
+<div style="background-color: #ef3a3a;"></div>
+<strong style="vertical-align: middle;">Partie <span style="color: #ef3a3a;">SÉRIEUSE</span> <em>(bandeau Rouge)</em></strong>
+</header>
+<div>Demande beaucoup de concentration et de persuasion. Règles strictes favorisant le débat.</div>
+</aside>
+<aside>
+<header>
+<img src="static/img/chatelain.png" style="width: 30px;height: 30px;vertical-align: middle;">
+<strong style="vertical-align: middle;">Partie Premium</strong>
+</header>
+<div>Plus de rôles, plus d'options, plus de tout !</div>
+</aside>
+</article>
+</div>
+<h1 class="with-borders">
+<div></div>
+<span>Lancement rapide <img class="infotop" data-tooltip="Clique ici pour en savoir plus sur les différents types de partie" src="/static/img/information.png"></span>
+<div></div>
+</h1>
+<article class="featured-games"></article>
+<h1 class="with-borders header-levels">
+<div></div>
+<span>Quêtes & Niveaux</span>
+<div></div>
+</h1>
+<article class="levels">
+<aside class="level-progression">
+<div class="level-show">
+<div>
+<span>Grade actuel :</span><span class="level-title">Maître</span>
+</div>
+<div>
+<span>Prochain grade :</span><span class="level-title">Grand maître</span>
+</div>
+<div>
+</div>
+</div>
+<div class="level-bar">
+<div class="level-curbar " style="width: 14%"></div>
+<div class="level-curshow" style="left: 6%">81/90</div>
+</div>
+<div class="level-nb">
+<div>Niv 80</div>
+<div>Niv 90</div>
+<div></div>
+</div>
+<div class="level-recap">
+<header>Récompense du grade "Grand maître"</header>
+<main>
+<div>90 <img src="/static/img/shop/hc-0.png" class="hc small"></div> </main>
+</div>
+</aside>
+<aside class="recommended-quests">
+<img src="/jeu/assets/images/icon-refresh.png" class="quest-refresh" data-tooltip="Rafraîchir les quêtes">
+<header>
+<h2>Quêtes recommandées</h2>
+<span>Chaque quête terminée te fait gagner 1 niveau</span>
+</header>
+<main>
+<aside class="quest-box inprogress">
+<div class="quest-title"><a href='/parrainage'>Parrainer</a> 5 personnes</div><div class="quest-collect">
+<button class="quest-collect-button" data-quest="5">Collecter 150<img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux">
+</button>
+</div><div class="quest-progress">
+<div class="quest-bar-container">
+<div class="quest-recap">(2/5)</div>
+<div class="quest-bar">
+<div style="width: 42%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>150</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+<div class="quest-locked">
+<img src="/static/img/quest-lock.png">
+<div>Débloqué au niveau ??</div>
+</div>
+<div class="quest-finished">
+<div class="quest-bar-container">
+<div class="quest-recap">(5/5)</div>
+<div class="quest-bar">
+<div style="width: 104%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>150</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+</aside><aside class="quest-box inprogress">
+<div class="quest-title"><a href='/parrainage'>Parrainer</a> 20 personnes</div><div class="quest-collect">
+<button class="quest-collect-button" data-quest="6">Collecter 500<img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux">
+</button>
+</div><div class="quest-progress">
+<div class="quest-bar-container">
+<div class="quest-recap">(2/20)</div>
+<div class="quest-bar">
+<div style="width: 12%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>500</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+<div class="quest-locked">
+<img src="/static/img/quest-lock.png">
+<div>Débloqué au niveau ??</div>
+ </div>
+<div class="quest-finished">
+<div class="quest-bar-container">
+<div class="quest-recap">(20/20)</div>
+<div class="quest-bar">
+<div style="width: 104%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>500</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+</aside><aside class="quest-box inprogress">
+<div class="quest-title">Atteindre la ligue ARGENT du Panthéon</div><div class="quest-collect">
+<button class="quest-collect-button" data-quest="56">Collecter 25<img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux">
+</button>
+</div><div class="quest-progress">
+<div class="quest-bar-container">
+<div class="quest-recap">(0/1)</div>
+<div class="quest-bar">
+<div style="width: 2%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>25</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+<div class="quest-locked">
+<img src="/static/img/quest-lock.png">
+<div>Débloqué au niveau ??</div>
+</div>
+<div class="quest-finished">
+<div class="quest-bar-container">
+<div class="quest-recap">(1/1)</div>
+<div class="quest-bar">
+<div style="width: 104%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>25</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+</aside><aside class="quest-box inprogress">
+<div class="quest-title">Atteindre la ligue OR du Panthéon</div><div class="quest-collect">
+<button class="quest-collect-button" data-quest="57">Collecter 50<img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux">
+</button>
+</div><div class="quest-progress">
+<div class="quest-bar-container">
+<div class="quest-recap">(0/1)</div>
+<div class="quest-bar">
+<div style="width: 2%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>50</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+<div class="quest-locked">
+<img src="/static/img/quest-lock.png">
+<div>Débloqué au niveau ??</div>
+</div>
+<div class="quest-finished">
+<div class="quest-bar-container">
+<div class="quest-recap">(1/1)</div>
+<div class="quest-bar">
+<div style="width: 104%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>50</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+</aside><aside class="quest-box inprogress">
+<div class="quest-title">Être dans un hameau classé 3ème</div><div class="quest-collect">
+<button class="quest-collect-button" data-quest="58">Collecter 10<img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux">
+</button>
+</div><div class="quest-progress">
+<div class="quest-bar-container">
+<div class="quest-recap">(0/1)</div>
+<div class="quest-bar">
+<div style="width: 2%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>10</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+<div class="quest-locked">
+<img src="/static/img/quest-lock.png">
+<div>Débloqué au niveau ??</div>
+</div>
+<div class="quest-finished">
+<div class="quest-bar-container">
+<div class="quest-recap">(1/1)</div>
+<div class="quest-bar">
+<div style="width: 104%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>10</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+</aside><aside class="quest-box inprogress">
+<div class="quest-title">Être dans un hameau classé 2ème</div><div class="quest-collect">
+<button class="quest-collect-button" data-quest="59">Collecter 20<img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux">
+</button>
+</div><div class="quest-progress">
+<div class="quest-bar-container">
+<div class="quest-recap">(0/1)</div>
+<div class="quest-bar">
+<div style="width: 2%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>20</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+<div class="quest-locked">
+<img src="/static/img/quest-lock.png">
+<div>Débloqué au niveau ??</div>
+</div>
+<div class="quest-finished">
+<div class="quest-bar-container">
+<div class="quest-recap">(1/1)</div>
+<div class="quest-bar">
+<div style="width: 104%"></div>
+</div>
+</div>
+<div class="quest-reward">
+<span>20</span><img src="/static/img/shop/hc-0.png" class="hc small" alt="Cristaux"></div>
+</div>
+</aside> </main>
+<footer>
+<a href="/quests" target="_blank">Voir toutes les quêtes</a>
+</footer>
+</aside>
+</article>
+<h1 class="with-borders header-waiting">
+<div></div>
+<span>Liste des parties en attente</span>
+<div></div>
+</h1>
+<article class="games-list games-waiting">
+<aside class="d-games">
+<header>Espace détente</header>
+<article class="waiting-game title">
+<div></div>
+<aside>Nom</aside>
+<aside>Créateur</aside>
+<aside>Places</aside>
+<aside>Options</aside>
+</article>
+<main>
+<article class="empty">
+<h2>Chargement en cours</h2>
+<img src="/static/js/tinymce/skins/lightgray/img/loader.gif" />
+</article>
+</main>
+</aside>
+<aside class="r-games">
+<header>Espace réflexion</header>
+<article class="waiting-game title">
+<div></div>
+<aside>Nom</aside>
+<aside>Créateur</aside>
+<aside>Places</aside>
+<aside>Options</aside>
+</article>
+<main>
+<article class="empty">
+<h2>Chargement en cours</h2>
+<img src="/static/js/tinymce/skins/lightgray/img/loader.gif" />
+</article>
+</main>
+</aside>
+</article>
+<h1 class="with-borders header-launched">
+<div></div>
+<span>Liste des parties en cours</span>
+<div></div>
+</h1>
+<article class="games-list games-launched">
+ <aside class="d-games">
+<header>Espace détente</header>
+<article class="waiting-game title">
+<div></div>
+<aside>Nom</aside>
+<aside>Créateur</aside>
+<aside>Places</aside>
+<aside>Options</aside>
+</article>
+<main>
+<article class="empty">
+<h2>Chargement en cours</h2>
+<img src="/static/js/tinymce/skins/lightgray/img/loader.gif" />
+</article>
+</main>
+</aside>
+<aside class="r-games">
+<header>Espace réflexion</header>
+<article class="waiting-game title">
+<div></div>
+<aside>Nom</aside>
+<aside>Créateur</aside>
+<aside>Places</aside>
+<aside>Options</aside>
+</article>
+<main>
+<article class="empty">
+<h2>Chargement en cours</h2>
+<img src="/static/js/tinymce/skins/lightgray/img/loader.gif" />
+</article>
+</main>
+</aside>
+</article>
+<h1>Vous n'avez pas trouvé votre bonheur ?</h1>
+<article>
+<button data-type="1" class="creer-partie">
+<img src="static/img/icon-wolf-head.png"> CRÉER UNE PARTIE
+</button>
+</article>
+</section>
+<section class="creer-page hidden">
+<article>
+<button class="retour-room">< Revenir <br>aux salons</button>
+<aside class="header-bloc">Créer une partie</aside>
+<aside class="header-advice">Assurez-vous qu’aucune partie similaire à celle que vous souhaitez créer n'existe. Les doublons rendent les temps
+pour lancer une partie plus longs.</aside>
+<aside class="type-partie anim">
+<header>1 - Choisis le type de partie</header>
+<main>
+<button class="" value="3">CARNAGE</button>
+<button class="active" value="1">FUN</button>
+<button value="0">NORMALE</button>
+<button value="2">SÉRIEUSE</button>
+<button value="9">ANIMATION</button>
+</main>
+<footer>
+<div class="infos-type" data-type="3">Viens t'amuser avant tout, partie rapide et composition définie.</div>
+<div class="infos-type active" data-type="1">Parties idéales pour discuter avec ses amis et jouer dans une ambiance détendue.</div>
+<div class="infos-type" data-type="0">Tu y trouveras de la réflexion et une bonne ambiance. La participation au débat et l'argumentation sont requises.</div>
+<div class="infos-type" data-type="2">Règles strictes pour joueurs aimant le challenge. Concentration et participation active. Accroche-toi !</div>
+<div class="infos-type" data-type="9">Parties réservées à l'équipe Animation dans le but de divertir les joueurs.</div>
+</footer>
+</aside>
+<aside class="nom-partie">
+<header>2 - Donne un nom à ta partie</header>
+<main>
+<input id="game-name" maxlength="15" type="text" placeholder="Nom de partie" />
+</main>
+</aside>
+<aside class="not-box">
+<aside></aside>
+<aside><img src="jeu/assets/images/carte1.png" /><span>Options classiques</span></aside>
+<aside><img src="static/img/chatelain.png" /><span>Options premium</span></aside>
+</aside>
+<aside class="debat-partie">
+<aside>3 - Choisis le temps de débat</aside>
+<aside>
+<button class="grey active" value="3">3 min</button>
+</aside>
+<aside>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="4">4 min</button>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="5">5 min</button>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="6">6 min</button>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="8">8 min</button>
+</aside>
+</aside>
+<aside class="options-partie">
+<aside>4 - Options supplémentaires</aside>
+<aside>
+<button class="grey" value="vocal">Vocale</button>
+<button class="grey" value="whiteFlag">Sans points</button>
+<button class="event-option" value="st-patrick">St-Patrick</button>
+</aside>
+<aside>
+<button id="gm_mode" class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="reel">Meneur réel</button>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="anonyme">Anonyme</button>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="selective">Sélective</button>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="privee">Privée</button>
+</aside>
+</aside>
+<aside class="password-partie hidden">
+<header>4b - Donne un mot de passe à ta partie</header>
+<main>
+<input id="game-password" maxlength="15" type="text" placeholder="Mot de passe" />
+</main>
+</aside>
+<aside class="rules-partie hidden">
+<header>4c - Rajoute des règles à ta partie (laisse vide un champ pour ne pas préciser de règle supplémentaire)</header>
+<main>
+<aside><input class="option-rule" maxlength="300" type="text" placeholder="Règle 1" /><span class="count-char">000/300</span></aside>
+<aside><input class="option-rule" maxlength="300" type="text" placeholder="Règle 2" /><span class="count-char">000/300</span></aside>
+<aside><input class="option-rule" maxlength="300" type="text" placeholder="Règle 3" /><span class="count-char">000/300</span></aside>
+</main>
+</aside>
+<aside class="nbj-partie">
+<aside>5 - Nombre de joueurs</aside>
+<aside>
+<button class="grey active" value="8">8 j</button>
+<button class="grey" value="12">12 j</button>
+</aside>
+<aside>
+<button class="p-disabled" data-tooltip="Cette fonctionnalité est réservée aux membres premium !" value="10">de 6 j à 50 j</button>
+</aside>
+</aside>
+<aside class="not-box">
+<aside></aside>
+<aside><img src="jeu/assets/images/carte1.png" /><span>Partie basique</span></aside>
+<aside><img src="static/img/chatelain.png" /><span>Partie premium</span></aside>
+</aside>
+<aside class="cartes-partie">
+<aside>6 - Choix des cartes</aside>
+<aside>
+<button class="grey active" value="8">Cartes de base<br>(8 cartes)</button>
+<div>
+<img src="jeu/assets/images/miniatures/carte1_90_90.png" id="carte_1" alt="Simple Villageois" data-tooltip="<strong>Simple Villageois</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Il ne dispose d'aucun pouvoir particulier : uniquement sa perspicacit&eacute; et sa force de persuasion." /><img src="jeu/assets/images/miniatures/carte2_90_90.png" id="carte_2" alt="Loup-Garou" data-tooltip="<strong>Loup-Garou</strong><br>Son objectif est d'&eacute;liminer tous les innocents (ceux qui ne sont pas Loups-Garous). Chaque nuit, il se r&eacute;unit avec ses comp&egrave;res Loups pour d&eacute;cider d'une victime &agrave; &eacute;liminer..." /><img src="jeu/assets/images/miniatures/carte3_90_90.png" id="carte_3" alt="Voyante" data-tooltip="<strong>Voyante</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, elle peut espionner un joueur et d&eacute;couvrir sa v&eacute;ritable identit&eacute;..." /><img src="jeu/assets/images/miniatures/carte5_90_90.png" id="carte_5" alt="Sorcière" data-tooltip="<strong>Sorcière</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Elle dispose de deux potions : une potion de vie pour sauver la victime des Loups, et une potion de mort pour assassiner quelqu'un." /><img src="jeu/assets/images/miniatures/carte6_90_90.png" id="carte_6" alt="Chasseur" data-tooltip="<strong>Chasseur</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. A sa mort, il doit &eacute;liminer un joueur en utilisant sa derni&egrave;re balle..." /><img src="jeu/assets/images/miniatures/carte7_90_90.png" id="carte_7" alt="Cupidon" data-tooltip="<strong>Cupidon</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. D&egrave;s le d&eacute;but de la partie, il doit former un couple de deux joueurs. Leur objectif sera de survivre ensemble, car si l'un d'eux meurt, l'autre se suicidera." /><img src="jeu/assets/images/miniatures/carte11_90_90.png" id="carte_11" alt="Voleur" data-tooltip="<strong>Voleur</strong><br>Son objectif n'est pas fixe : il peut choisir son rôle parmi les deux cartes qui n'ont pas encore &eacute;t&eacute; distribu&eacute;es." /><img src="jeu/assets/images/miniatures/carte12_90_90.png" id="carte_12" alt="Petite Fille" data-tooltip="<strong>Petite Fille</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, elle peut espionner les Loups-Garous." /> </div>
+<h2 class="title-free-cards">+ les cartes de la semaine<img data-tooltip="Chaque semaine, tu peux tester<br/>8 cartes premium gratuitement !" src="/static/img/information.png" id="carteGratuite"></h2>
+<div class="box-free-cards">
+<img src="jeu/assets/images/miniatures/carte19_90_90.png" id="carte_19" alt="Ange" data-tooltip="<strong>Ange</strong><br>Son objectif est d'&ecirc;tre &eacute;limin&eacute; par le village lors du premier vote de jour.<br />S'il r&eacute;ussit, il gagne la partie. Sinon, il devient un Simple Villageois." /><img src="jeu/assets/images/miniatures/carte25_90_90.png" id="carte_25" alt="Chien-Loup" data-tooltip="<strong>Chien-Loup</strong><br>Son objectif est d'éliminer tous les Loups-Garous. Au début du jeu, il peut choisir entre rester parmi le clan des Villageois ou alors de rejoindre le clan des Loups-Garous, s'il choisit de rejoindre les Loups-Garous, alors son objectif change et il doit éliminer tous les innocents." /><img src="jeu/assets/images/miniatures/carte32_90_90.png" id="carte_32" alt="Ankou" data-tooltip="<strong>Ankou</strong><br>Son objectif est d’éliminer tous les Loups-Garous. Une fois que l'Ankou meurt, il peut continuer de voter pendant deux tours maximum depuis le cimetière. Son vote ne sera pas visible des joueurs mais sera comptabilisé et participera à l'élimination d'un joueur de jour tout en voyant les morts parler." /><img src="jeu/assets/images/miniatures/carte29_90_90.png" id="carte_29" alt="Juge Bègue" data-tooltip="<strong>Juge Bègue</strong><br>Son objectif est d'éliminer tous les Loups-Garous. Une fois dans la partie, il peut faire voter à nouveau le village à l'issue d'une journée." /><img src="jeu/assets/images/miniatures/carte15_90_90.png" id="carte_15" alt="Joueur de Flûte" data-tooltip="<strong>Joueur de Flûte</strong><br>Son objectif est d'enchanter tous les joueurs vivants de la partie. Il peut enchanter jusqu'&agrave; deux personnes par nuit." /><img src="jeu/assets/images/miniatures/carte24_90_90.png" id="carte_24" alt="Renard" data-tooltip="<strong>Renard</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, il peut flairer un joueur et savoir si lui ou un de ses 2 voisins fait partie du camp des loups. Si c'est le cas, il conserve son pouvoir pour la nuit suivante, en revanche si le joueur flairé et ses 2 voisins sont tous les 3 innocents, il perd son pouvoir." /><img src="jeu/assets/images/miniatures/carte10_90_90.png" id="carte_10" alt="Chaman" data-tooltip="<strong>Chaman</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, il dispose d'un court moment pour &eacute;couter les esprits." /><img src="jeu/assets/images/miniatures/carte4_90_90.png" id="carte_4" alt="Salvateur" data-tooltip="<strong>Salvateur</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, il peut prot&eacute;ger quelqu'un de l'attaque des Loups-Garous..." /> <div class='ribbon ribbon-alone'><span>Plus que 14h 7m</span></div> </div>
+</aside>
+<aside>
+<button class="" value="29">Toutes les cartes<br>(29 cartes)</button>
+<div>
+<img src="jeu/assets/images/miniatures/carte1_90_90.png" id="carte_1" alt="Simple Villageois" data-tooltip="<strong>Simple Villageois</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Il ne dispose d'aucun pouvoir particulier : uniquement sa perspicacit&eacute; et sa force de persuasion." /><img src="jeu/assets/images/miniatures/carte2_90_90.png" id="carte_2" alt="Loup-Garou" data-tooltip="<strong>Loup-Garou</strong><br>Son objectif est d'&eacute;liminer tous les innocents (ceux qui ne sont pas Loups-Garous). Chaque nuit, il se r&eacute;unit avec ses comp&egrave;res Loups pour d&eacute;cider d'une victime &agrave; &eacute;liminer..." /><img src="jeu/assets/images/miniatures/carte3_90_90.png" id="carte_3" alt="Voyante" data-tooltip="<strong>Voyante</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, elle peut espionner un joueur et d&eacute;couvrir sa v&eacute;ritable identit&eacute;..." /><img src="jeu/assets/images/miniatures/carte4_90_90.png" id="carte_4" alt="Salvateur" data-tooltip="<strong>Salvateur</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, il peut prot&eacute;ger quelqu'un de l'attaque des Loups-Garous..." /><img src="jeu/assets/images/miniatures/carte5_90_90.png" id="carte_5" alt="Sorcière" data-tooltip="<strong>Sorcière</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Elle dispose de deux potions : une potion de vie pour sauver la victime des Loups, et une potion de mort pour assassiner quelqu'un." /><img src="jeu/assets/images/miniatures/carte6_90_90.png" id="carte_6" alt="Chasseur" data-tooltip="<strong>Chasseur</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. A sa mort, il doit &eacute;liminer un joueur en utilisant sa derni&egrave;re balle..." /><img src="jeu/assets/images/miniatures/carte7_90_90.png" id="carte_7" alt="Cupidon" data-tooltip="<strong>Cupidon</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. D&egrave;s le d&eacute;but de la partie, il doit former un couple de deux joueurs. Leur objectif sera de survivre ensemble, car si l'un d'eux meurt, l'autre se suicidera." /><img src="jeu/assets/images/miniatures/carte8_90_90.png" id="carte_8" alt="Ancien" data-tooltip="<strong>Ancien</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Il peut r&eacute;sister &agrave; la premi&egrave;re attaque des loups. <b>Mais s'il est tu&eacute; par un ou des innocent(s)</b>, tous les innocents perdront leurs pouvoirs !" /><img src="jeu/assets/images/miniatures/carte9_90_90.png" id="carte_9" alt="Loup-Garou Blanc" data-tooltip="<strong>Loup-Garou Blanc</strong><br>Son objectif est de terminer SEUL la partie. Les autres Loups-Garous croient qu'il est un loup normal, mais une nuit sur deux il peut assassiner un loup de son choix..." /><img src="jeu/assets/images/miniatures/carte10_90_90.png" id="carte_10" alt="Chaman" data-tooltip="<strong>Chaman</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, il dispose d'un court moment pour &eacute;couter les esprits." /><img src="jeu/assets/images/miniatures/carte11_90_90.png" id="carte_11" alt="Voleur" data-tooltip="<strong>Voleur</strong><br>Son objectif n'est pas fixe : il peut choisir son rôle parmi les deux cartes qui n'ont pas encore &eacute;t&eacute; distribu&eacute;es." /><img src="jeu/assets/images/miniatures/carte12_90_90.png" id="carte_12" alt="Petite Fille" data-tooltip="<strong>Petite Fille</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, elle peut espionner les Loups-Garous." /><img src="jeu/assets/images/miniatures/carte13_90_90.png" id="carte_13" alt="Idiot du Village" data-tooltip="<strong>Idiot du Village</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Si le village d&eacute;cide de l'&eacute;liminer, <b>il ne meurt pas</b>, les villageois l'&eacute;pargnant au dernier moment. Mais il perd d&egrave;s lors son droit de vote journalier." /><img src="jeu/assets/images/miniatures/carte14_90_90.png" id="carte_14" alt="Bouc Emissaire" data-tooltip="<strong>Bouc Emissaire</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Mais attention ! En cas de doute sur la personne &agrave; &eacute;liminer, le village d&eacute;cidera de l'éliminer par d&eacute;faut." /><img src="jeu/assets/images/miniatures/carte15_90_90.png" id="carte_15" alt="Joueur de Flûte" data-tooltip="<strong>Joueur de Flûte</strong><br>Son objectif est d'enchanter tous les joueurs vivants de la partie. Il peut enchanter jusqu'&agrave; deux personnes par nuit." /><img src="jeu/assets/images/miniatures/carte16_90_90.png" id="carte_16" alt="Enfant Sauvage" data-tooltip="<strong>Enfant Sauvage</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous.<br />Il choisit un mod&egrave;le au d&eacute;but du jeu, si ce dernier meurt, il devient Loup-Garou et joue dans leur camp." /><img src="jeu/assets/images/miniatures/carte17_90_90.png" id="carte_17" alt="Corbeau" data-tooltip="<strong>Corbeau</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous.<br />Chaque nuit, il peut d&eacute;signer un joueur, qui se retrouvera le lendemain avec deux voix contre lui au vote.<br />C'est donc un pouvoir tr&egrave;s puissant..." /><img src="jeu/assets/images/miniatures/carte18_90_90.png" id="carte_18" alt="Villageois-Villageois" data-tooltip="<strong>Villageois-Villageois</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Il ne dispose d'aucun pouvoir particulier : uniquement sa perspicacit&eacute; et sa force de persuasion. Toutefois, tous les joueurs voient son rôle d'innocent." /><img src="jeu/assets/images/miniatures/carte19_90_90.png" id="carte_19" alt="Ange" data-tooltip="<strong>Ange</strong><br>Son objectif est d'&ecirc;tre &eacute;limin&eacute; par le village lors du premier vote de jour.<br />S'il r&eacute;ussit, il gagne la partie. Sinon, il devient un Simple Villageois." /><img src="jeu/assets/images/miniatures/carte20_90_90.png" id="carte_20" alt="Infect Père des Loups" data-tooltip="<strong>Infect Père des Loups</strong><br>Son objectif est d'&eacute;liminer tous les innocents (ceux qui ne sont pas Loups-Garous). Chaque nuit, il se r&eacute;unit avec ses comp&egrave;res Loups pour d&eacute;cider d'une victime &agrave; &eacute;liminer... Une fois  dans la partie, il peut transformer la victime des loups en ... loup-garou ! Une infection qui peut se révéler cruciale, car l'infecté garde ses pouvoirs d'innocent !" /><img src="jeu/assets/images/miniatures/carte21_90_90.png" id="carte_21" alt="Grand Méchant Loup" data-tooltip="<strong>Grand Méchant Loup</strong><br>Son objectif est d'&eacute;liminer tous les innocents (ceux qui ne sont pas Loups-Garous). Chaque nuit, il se r&eacute;unit avec ses comp&egrave;res Loups pour d&eacute;cider d'une victime &agrave; &eacute;liminer... Tant qu'aucun autre loup n'est mort, il peut, chaque nuit, dévorer une victime supplémentaire." /><img src="jeu/assets/images/miniatures/carte22_90_90.png" id="carte_22" alt="Sœur" data-tooltip="<strong>Sœur</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Elle connaît l'identité de son autre soeur, et peut donc avoir confiance en ses paroles." /><img src="jeu/assets/images/miniatures/carte23_90_90.png" id="carte_23" alt="Montreur d’Ours" data-tooltip="<strong>Montreur d’Ours</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Au lever du jour, s'il se trouve à côté d'un loup-garou, l'ours grogne." /><img src="jeu/assets/images/miniatures/carte24_90_90.png" id="carte_24" alt="Renard" data-tooltip="<strong>Renard</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Chaque nuit, il peut flairer un joueur et savoir si lui ou un de ses 2 voisins fait partie du camp des loups. Si c'est le cas, il conserve son pouvoir pour la nuit suivante, en revanche si le joueur flairé et ses 2 voisins sont tous les 3 innocents, il perd son pouvoir." /><img src="jeu/assets/images/miniatures/carte25_90_90.png" id="carte_25" alt="Chien-Loup" data-tooltip="<strong>Chien-Loup</strong><br>Son objectif est d'éliminer tous les Loups-Garous. Au début du jeu, il peut choisir entre rester parmi le clan des Villageois ou alors de rejoindre le clan des Loups-Garous, s'il choisit de rejoindre les Loups-Garous, alors son objectif change et il doit éliminer tous les innocents." /><img src="jeu/assets/images/miniatures/carte26_90_90.png" id="carte_26" alt="Frère" data-tooltip="<strong>Frère</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Il connaît l'identité de ses 2 autres frères, et peut donc avoir confiance en leurs paroles." /><img src="jeu/assets/images/miniatures/carte27_90_90.png" id="carte_27" alt="Chevalier à l’Épée rouillée" data-tooltip="<strong>Chevalier à l’Épée rouillée</strong><br>Son objectif est d'&eacute;liminer tous les Loups-Garous. Lorsque les Loups-Garous le dévorent, il condamne le premier Loup-Garou en-dessous de lui à mourir." /><img src="jeu/assets/images/miniatures/carte29_90_90.png" id="carte_29" alt="Juge Bègue" data-tooltip="<strong>Juge Bègue</strong><br>Son objectif est d'éliminer tous les Loups-Garous. Une fois dans la partie, il peut faire voter à nouveau le village à l'issue d'une journée." /><img src="jeu/assets/images/miniatures/carte32_90_90.png" id="carte_32" alt="Ankou" data-tooltip="<strong>Ankou</strong><br>Son objectif est d’éliminer tous les Loups-Garous. Une fois que l'Ankou meurt, il peut continuer de voter pendant deux tours maximum depuis le cimetière. Son vote ne sera pas visible des joueurs mais sera comptabilisé et participera à l'élimination d'un joueur de jour tout en voyant les morts parler." /><img src="jeu/assets/images/miniatures/carte33_90_90.png" id="carte_33" alt="Noctambule" data-tooltip="<strong>Noctambule</strong><br>Son objectif est d'éliminer tous les Loups-Garous. Chaque nuit, il doit choisir un joueur chez qui aller dormir. Le joueur connaît alors l'identité du Noctambule mais est privé de ses pouvoirs pour la nuit." /> </div>
+</aside>
+</aside>
+<button class="creer-partie">
+CRÉER
+</button>
+</article>
+</section>
+<div class="footer-top"></div>
+</div>
+<footer>
+<nav class="footer-nav">
+<a href="https://www.facebook.com/lgenligne" target="_blank"><i class="mdi mdi-facebook"></i></a>
+<a href="https://twitter.com/lgenligne" target="_blank"><i class="mdi mdi-twitter"></i></a>
+<a href="/cgu">Règles & CGV</a>
+<a href="/staff">Équipe du site</a>
+<span class="personal-data">Informations personnelles</span>
+<a href="/support">Support</a>
+<img src="/jeu/assets/images/vivox-logo.png" class="vivox" alt="Vivox">
+</nav>
+<div>
+<p>Loups-garous-en-ligne.com a été agréé par les créateurs du jeu Loups-garous de Thiercelieux, messieurs Philippe des Pallières et Hervé Marly, ainsi que par les éditions Lui-même.</p>
+<p>Ce site bénéficie d'une licence d'exploitation des noms, images, contenus et concepts tirés du jeu. Toute utilisation dérivée pourra entraîner des poursuites judiciaires.</p>
+</div>
+</footer>
+<script src="https://code.jquery.com/ui/1.8.20/jquery-ui.min.js"></script>
+<div class="friends bgbrown ">
+<header class="with-hamlet-tag">
+<button class="friends-top-button fold" data-tooltip="Plier le menu">
+<img src="/static/img/friends/icon-fold.png" alt="Déconnexion">
+</button>
+<a class="friends-top-button logout" href="/logout.php" data-tooltip="Déconnexion">
+<img src="/static/img/friends/icon-logout.png" alt="Déconnexion">
+</a>
+<div class="avatar-joueur" data-profile="Astreiya">
+<div id="bg-avatar-joueur"></div>
+<div class="apercu_personnage_rar apercu_personnage_rar__mini apercu_personnage_rar__femme">{"login":"Astreiya","sexe":"F","codeVisage":"M22245411744200400011","equipement":[{"idItem":"520","declinaison":null,"parametre":0,"nom":"concours15","slot":"Chapeau","declinaisons":[],"slotsMasques":["Chaussures","Jupe","Gilet","Robe"],"dependCouleurPeau":false,"dependPostureMainG":false,"dependPostureMainD":false,"postureMainG":null,"postureMainD":null,"zIndexCalques":["2600","10300"]},{"idItem":"105","declinaison":null,"parametre":0,"nom":"epee","slot":"Epee","declinaisons":[],"slotsMasques":[],"dependCouleurPeau":false,"dependPostureMainG":false,"dependPostureMainD":false,"postureMainG":null,"postureMainD":null,"zIndexCalques":["2900"]},{"idItem":"109","declinaison":"5","parametre":0,"nom":"col","slot":"Col","declinaisons":["0","1","2","3","4","5","6","7","8","9","10"],"slotsMasques":[],"dependCouleurPeau":false,"dependPostureMainG":false,"dependPostureMainD":false,"postureMainG":null,"postureMainD":null,"zIndexCalques":["2600"]},{"idItem":"609","declinaison":null,"parametre":0,"nom":"bbManchotc","slot":"Familier","declinaisons":[],"slotsMasques":[],"dependCouleurPeau":false,"dependPostureMainG":false,"dependPostureMainD":false,"postureMainG":null,"postureMainD":null,"zIndexCalques":["19800"]}]}</div> </div>
+<h2>
+<small><a href="/hameau?tag=Canar">[Canar]</a></small>
+<span data-profile="Astreiya">
+<img style="visibility: hidden" src="/static/img/chatelain.png" alt="Premium">
+Astreiya
+</span>
+</span></h2>
+</header>
+<input type="text" id="moderationField" placeholder="Actions de modération">
+<script type="text/javascript">
+            $("#boxSurveillance").click(function () {
+                $("#moderationField").focus();
+            });
+
+            var availableChoices = [
+                { label: "[ Infos équipe ]", link: "/moderation" },{ "label": "[ Historique ]", "link": "/moderation/historique" },{ label: "Tickets", link: "/moderation/support/" },{ "label": "Rôles", "request_name": "voir_roles", "steps_required": "0" }            ];
+        </script>
+<script type="text/javascript" src="static/js/moderation.js?b1b14e283
+"></script>
+<link rel="stylesheet" href="static/css/moderation.css?b1b14e283
+" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.multi-select.js?b1b14e283
+"></script>
+<link rel="stylesheet" href="static/css/multi-select.css?b1b14e283
+">
+<div class="stats-show">
+<div class="lv-show" data-tooltip="Niveau actuel">
+<span>81</span>
+<img src="/static/img/friends/icon-lv.png" alt="Niveau">
+</div>
+<div id="gm_commands" class="gm-show" data-tooltip="Rang MDJ">
+<img src="/static/img/profile/level1.svg" alt="Rang MDJ">
+ </div>
+<div class="hc-show" data-tooltip="Cristaux">
+<span class="hc-nb">805</span>
+<img src="/static/img/shop/hc-0.png">
+</div>
+<div class="ja-show" data-tooltip="Jetons animation">
+<span>97</span>
+<img src="/static/img/shop/coin.png" alt="Jetons">
+</div>
+</div>
+<div id="bonus-container"><ul class="qdv-bonus"><li data-tooltip="&lt;img src=&quot;/static/img/chatelain.png&quot; alt=&quot;Premium&quot;&gt; <br />Disponible indéfiniment"><img src="/static/img/chatelain.png" alt="Premium">2 parties <strong>Premium</strong></li></ul></div> <script> $(function() { $('.open-qdv').click(); }); </script>
+<ul class="friends-links">
+<li>
+<a href="/parrainage">
+<img src="/static/img/friends/icon-people.png" alt="Parrainage"> Parrainage
+</a>
+</li>
+<li>
+<a href="/stats">
+<img src="/static/img/friends/icon-ranking.png" alt="Classement"> Classement
+</a>
+</li>
+<li>
+<button class="open-qdv">
+<img src="/static/img/friends/icon-gift.png" alt="Quotidien du Village">
+Quotidien du Village
+</button>
+</li>
+<li>
+<a href="/compte">
+<img src="/static/img/friends/icon-settings.png" alt="Mon compte"> Mon compte
+</a>
+</li>
+</ul>
+<ul class="friends-links-small">
+<li>
+<a href="/parrainage" data-tooltip="Parrainage">
+<img src="/static/img/friends/icon-people.png" alt="Parrainage">
+</a>
+</li>
+<li>
+<a href="/stats" data-tooltip="Classement">
+<img src="/static/img/friends/icon-ranking.png" alt="Classement">
+</a>
+</li>
+<li>
+<button class="open-qdv" data-tooltip="Quotidien du Village">
+<img src="/static/img/friends/icon-gift.png" alt="Quotidien du Village">
+</button>
+</li>
+<li>
+<a href="/compte" data-tooltip="Mon compte">
+<img src="/static/img/friends/icon-settings.png" alt="Mon compte">
+</a>
+</li>
+</ul>
+<button class="friends-toggle">
+Amis
+(13/494)
+<i class="icon-more"></i>
+</button>
+<div class="friends-list">
+<p class="friends-loading">
+Chargement…
+</p>
+<ul></ul>
+<div class="friends-list-bottom">
+<div class="friends-actions friends-actions-all bgbrown">
+<button class="friend-action friends-action-search" data-tooltip="Rechercher un joueur">
+<img src="/static/img/friends/icon-search.png" alt="Recherche">
+</button>
+<button class="friend-action friends-action-delete" data-tooltip="Supprimer des amis">
+<img src="/static/img/friends/icon-delete.png" alt="Suppression">
+</button>
+<button class="friend-action friends-action-group" data-tooltip="Créer un groupe">
+<img src="/static/img/friends/icon-group.png" alt="Groupe">
+</button>
+</div>
+<div class="friends-actions friends-actions-delete bgbrown">
+<button class="button_secondary" disabled>Supprimer 0 amis</button>
+<div class="friends-actions-close" data-tooltip="Annuler">&times;</div>
+</div>
+<div class="friends-actions friends-actions-search">
+<input class="friends-search-field" type="text" placeholder="Rechercher un joueur…">
+<div class="friends-actions-close" data-tooltip="Annuler">&times;</div>
+</div>
+</div>
+<div class="friends-search"></div>
+</div>
+</div>
+<div id="modal">
+<div id="modal_wrapper">
+<div id="modal_message" class="block shadow rounded">
+ <div id="modal_close">✕</div>
+<div class="block_header">
+<h3></h3>
+</div>
+<div id="modal_message_wrapper" class="block_scrollable_wrapper scrollbar-light">
+<div class="block_scrollable_content"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tooltip" class="rounded">
+<div id="tooltip-arrow"></div>
+<div id="tooltip-content"></div>
+</div>
+<div id="achievement_tooltip" class="shadow"></div>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+            { lang: 'fr' }
+        </script>
+<div id="fox-link" style="display: none;">
+"\/\/fox.loups-garous-en-ligne.com"</div>
+<div id="fox-subscriptions-token" style="display: none;">
+null </div>
+<script type="text/javascript" src="/static/js/main.min.js?b1b14e283
+"></script>
+</body>
+</html>
